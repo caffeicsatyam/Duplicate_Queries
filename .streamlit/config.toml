@@ -1,0 +1,6 @@
+[server]
+port = 10000
+enableXsrfProtection = false
+
+[client]
+showErrorDetails = true
