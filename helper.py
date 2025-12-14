@@ -264,11 +264,11 @@ def preprocess(q):
     q = q.replace("'ll", " will")
 
     # Removing HTML tags
-    q = BeautifulSoup(q)
+    q = BeautifulSoup(q, 'html.parser')
     q = q.get_text()
 
     # Remove punctuations
-    pattern = re.compile('\W')
+    pattern = re.compile(r'\W')
     q = re.sub(pattern, ' ', q).strip()
 
     return q
