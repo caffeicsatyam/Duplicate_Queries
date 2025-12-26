@@ -2,6 +2,13 @@ import streamlit as st
 import helper
 import pickle
 import time
+import nltk
+
+# Download NLTK stopwords data
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 # -------------------------------------------------------------------------
 # 1. Page Configuration
